@@ -3,4 +3,4 @@ Xbmc server frontend web
 
 Based on xbmc-video-server
 
-all credit to Jalle19
+all credits to Jalle19
