@@ -1,0 +1,310 @@
+@import "../../../vendor/crisu83/yiistrap/assets/less/bootstrap.less";
+@import "../../../vendor/crisu83/yiistrap/assets/less/responsive.less";
+@import "../../../vendor/crisu83/yiistrap/assets/less/yiistrap.less";
+@import "bootswatch/variables.less";
+@import "bootswatch/bootswatch.less";
+@import "typeahead.less";
+@import "fonts.less";
+@import "fontawesome/font-awesome.less";
+@import "yiistrap/pager.less";
+@import "yiistrap/yiistrap.less";
+
+// Heading links should not have link color
+h1, h2, h3, h4, h5, h6 {
+	& > a {
+		color: @blueDark;
+	}
+}
+
+h1#home-url {
+	margin-top: 20px;
+
+	a:hover {
+		text-decoration: none;
+	}
+}
+
+span.required {
+	color: @red;
+}
+
+.btn-padded {
+	margin-left: @gridGutterWidth;
+}
+
+.form-help {
+	display: table;
+	color: @infoText;
+	background: @infoBackground;
+	border: @infoBorder;
+	.border-radius(@baseBorderRadius);
+	padding: 10px 20px;
+	margin: 20px 0;
+}
+
+.help-block {
+	font-size: smaller;
+	font-style: italic;
+}
+
+.button-column {
+	min-width: auto !important;
+	
+	& a {
+		color: @blueDark; // don't use link color
+		text-decoration: none;
+	}
+}
+
+.detail-view {
+	margin-top: 20px;
+}
+
+.grid-view td {
+	vertical-align: top !important;
+}
+
+.movie-filter-form {
+	.control-group {
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+	// ironically the inputs in this container are <button> or <a>
+	.buttons {
+		button, a {
+			margin: 10px 0 20px 0;
+		}
+
+		// add a left margin only on the "Clear filter" button
+		button {
+			margin-right: 20px;
+		}
+	}
+}
+
+.item-grid, .actor-grid {
+	.caption {
+		min-height: 60px;
+
+		// override color to make links look like normal text
+		a {
+			color: @gray !important;
+		}
+	}
+}
+
+.item-grid {
+	.thumbnail {
+		.image-container {
+			width: 100%;
+			height: 240px;
+			text-align: center;
+
+			img {
+				max-height: 240px;
+			}
+		}
+	}
+}
+
+.pager {
+	border-top: 1px solid @tableBorder;
+}
+
+.item-details {
+	.item-thumbnail {
+		display: block;
+		border: 1px dotted #E5E5E5;
+		padding: 2px;
+	}
+
+	.item-links {
+		margin-top: 20px;
+	}
+
+	.item-description {
+		.item-top, .item-info, .item-plot {
+			border-bottom: 1px dotted #E5E5E5;
+			margin-bottom: 20px;
+		}
+
+		.item-top {
+			position: relative;
+
+			.media-flags {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+
+			&, .media-flags {
+				padding-bottom: 20px;
+			}
+		}
+
+		.item-title {
+			h2, p {
+				display: inline-block;
+			}
+
+			h2 {
+				margin-right: 10px;
+			}
+
+			p {
+				font-size: larger;
+			}
+
+			.tagline {
+				display: block;
+				margin: -10px 0 0 0;
+				font-style: italic;
+			}
+		}
+
+		.item-info {
+			.item-rating {
+				margin-right: 20px;
+
+				p {
+					margin-bottom: 5px;
+				}
+			}
+		}
+
+		.item-metadata {
+			p {
+				float: left;
+				padding: 0 10px;
+				border-left: 1px solid #E5E5E5;
+
+				&:first-child {
+					border: 0;
+					padding-left: 0;
+				}
+			}
+		}
+
+		.item-plot {
+			p {
+				font-style: italic;
+			}
+		}
+
+		.actor-grid .thumbnail {
+			.image-container {
+				min-height: 182px;
+			}
+		}
+	}
+}
+
+.recently-added-shows {
+	margin-top: 20px;
+	padding: 20px;
+}
+
+.recently-added-shows, .season-list {
+	border: 1px solid #E5E5E5;
+	.border-radius(@baseBorderRadius);
+	
+	.episode-thumbnail {
+		max-width: 116px;
+	}
+}
+
+.season-list {
+	.accordion-group {
+		margin-bottom: -1px;
+		border-width: 1px 0 0 0 ;
+		.border-radius(0);
+
+		&:first-child {
+			border-width: 0;
+		}
+
+		.accordion-inner {
+			padding: 20px;
+		}
+	}
+}
+
+.season-download {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px dotted #E5E5E5;
+
+	.btn {
+		margin-right: 10px;
+	}
+}
+
+.rating-star {
+	display: inline-block;
+	margin: 0 0 15px 0; // the star is not exactly 28px high
+	height: 28px;
+	font-size: 28px;
+}
+
+.rating-star-yellow:before {
+	content: "\2605";
+	position: absolute;
+	color: #FFCC33;
+}
+
+.media-flags {
+	.flag-section {
+		display: inline-block;
+		margin-left: 10px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		img {
+			display: inline-block;
+			margin-right: 5px;
+		}
+	}
+}
+
+.log-grid {
+	tr.error-row td {
+		background-color: @red !important;
+		color: #FFF;
+		
+		&.button-column {
+			background-color: #FFF !important;
+		}
+		
+		&.message-column {
+			width: 400px;
+			max-width: 400px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}
+
+.log-details {
+	.exception-message {
+		font-family: "Courier New", Courier, monospace;
+		font-size: 12px;
+	}
+}
+
+@media all and (max-width: 767px) {
+	.item-grid {
+		.thumbnail {
+			.image-container {
+				display: none;
+			}
+
+			.caption {
+				min-height: auto;
+			}
+		}
+	}
+}
